@@ -1,8 +1,12 @@
-FROM phusion/baseimage:0.9.15
+FROM alpine:3.3
 
-RUN apt-get update && apt-get install wget unzip
+RUN apk add --no-cache --virtual \
+  bash \
+  wget \
+  unzip
 
-ADD bin/ bin/
-ADD tmp/ tmp/
+ADD . /opt/app
+WORKDIR /opt/app
 
 ENTRYPOINT ["bin/run.sh"]
+CMD [""]
