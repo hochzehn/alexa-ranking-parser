@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 
-bin/download.sh
-bin/parse.sh $1
+bin/run/download.sh &> /dev/null
+bin/run/parse.sh $1
 
