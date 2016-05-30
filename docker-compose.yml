@@ -1,0 +1,8 @@
+version: '2'
+services:
+  parser:
+    build:
+      context: .
+    environment:
+      restmq: 192.168.99.100
+    command: "10"

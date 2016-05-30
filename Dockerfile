@@ -1,9 +1,11 @@
 FROM alpine:3.3
 
-RUN apk add --no-cache --virtual \
+RUN apk add --no-cache \
   bash \
   wget \
-  unzip
+  unzip \
+  parallel \
+  curl
 
 ADD . /opt/app
 WORKDIR /opt/app
