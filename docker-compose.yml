@@ -4,5 +4,6 @@ services:
     build:
       context: .
     environment:
-      restmq: 192.168.99.100
+      restmq_ip: 192.168.99.100
+      jobs: 100
     command: "10"
