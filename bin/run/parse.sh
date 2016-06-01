@@ -43,7 +43,4 @@ while read entry; do
 
 done < "$INTERMEDIATE_FILE"
 
-echo "DOMAIN FILE: "
 cat $DOMAIN_FILE
-
-cat $DOMAIN_FILE | parallel --jobs $jobs curl -s -X POST -d "value={}" "http://$restmq_ip:8888/q/domains" 1> /dev/null
