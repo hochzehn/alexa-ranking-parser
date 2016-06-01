@@ -6,7 +6,7 @@ Simple wrapper around the free list of the top one million website ranked by [Al
 
 ## Usage
 
-    docker-compose up
+    docker run --rm hochzehn/alexa-ranking-parser 10
 
 Returns the first 10 domains on the list, e.g.
 
