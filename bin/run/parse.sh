@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Defaults
-JOBS_DEFAULT=50
+JOBS_DEFAULT=10
 NUM_DEFAULT=10
 # Parameters
 
