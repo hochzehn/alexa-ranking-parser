@@ -7,8 +7,10 @@ RUN apk add --no-cache \
   parallel \
   curl
 
-ADD . /opt/app
+ADD ./app /opt/app
+ADD ./app/tmp /opt/app
+
 WORKDIR /opt/app
 
-ENTRYPOINT ["bin/run.sh"]
+ENTRYPOINT ["./entrypoint.sh"]
 CMD [""]

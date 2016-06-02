@@ -1,5 +1,15 @@
-#!/usr/bin/env bash
+#!/bin/sh
 
-bin/run/download.sh &> /dev/null
-bin/run/parse.sh $1
+NAME="hochzehn/$(basename ${PWD})"
 
+docker build --tag $NAME . > /dev/null
+
+if [ $# -ne 1 ]
+then
+    echo "Usage: bin/run.sh element_limit"
+else
+    docker run \
+      --rm \
+      $NAME \
+      $*
+fi
